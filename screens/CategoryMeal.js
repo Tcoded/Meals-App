@@ -3,11 +3,19 @@ import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 import DefaultStyles from '../constants/DefaultStyles';
 import { CATEGORIES, MEALS } from '../data/sample-data';
+import MealItem from '../components/MealItem';
 
 const CategoryMeal = props => {
     const renderMealItem = itemData => {
         return (
-            <View><Text>{itemData.item.title}</Text></View>
+            <MealItem
+                title={itemData.item.title}
+                duration={itemData.item.duration}
+                complexity={itemData.item.complexity}
+                cost={itemData.item.cost}
+                image={itemData.item.imageUrl}
+                onSelect={() => {}}
+            />
         );
     }
 
@@ -18,7 +26,11 @@ const CategoryMeal = props => {
 
     return (
         <View style={DefaultStyles.screen}>
-            <FlatList data={displayedMeals} renderItem={renderMealItem} />
+            <FlatList
+                data={displayedMeals}
+                renderItem={renderMealItem}
+                style={styles.list}
+            />
         </View>
     )
 };
@@ -33,6 +45,10 @@ CategoryMeal.navigationOptions = (navigationData) => {
     };
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    list: {
+        width: '100%'
+    }
+});
 
 export default CategoryMeal;
