@@ -1,19 +1,30 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 import DefaultStyles from '../constants/DefaultStyles';
+import { CATEGORIES } from '../data/sample-data';
+
+const renderGridItem = (itemData) => {
+    return <View style={styles.gridItem}><Text>{itemData.item.title}</Text></View>
+};
 
 const CategorySelection = props => {
     return (
-        <View style={DefaultStyles.screen}>
-            <Text>The Categories Screen!</Text>
-            <Button title="Go to Meals" onPress={() => {
-                props.navigation.navigate('CategoryMeals');
-            }} />
-        </View>
-    )
+        <FlatList
+            data={CATEGORIES}
+            renderItem={renderGridItem}
+            numColumns={2}
+        />
+    );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    gridItem: {
+        flex: 1,
+        margin: 15,
+        height: 140,
+        maxHeight: '33%'
+    }
+});
 
 export default CategorySelection;
