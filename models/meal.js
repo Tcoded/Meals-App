@@ -1,0 +1,33 @@
+class Meal {
+    constructor(
+        id,
+        categoryIds,
+        title,
+        cost,
+        complexity,
+        imageUrl,
+        duration,
+        ingredients,
+        directions,
+        isGlutenFree,
+        isVegan,
+        isVegetarian,
+        isLactoseFree
+    ) {
+        this.id = id,
+        this.categoryIds = categoryIds,
+        this.title = title,
+        this.cost = cost,
+        this.complexity = complexity,
+        this.imageUrl = imageUrl,
+        this.duration = duration,
+        this.ingredients = ingredients,
+        this.directions = directions,
+        this.isGlutenFree = isGlutenFree,
+        this.isVegan = isVegan,
+        this.isVegetarian = isVegetarian,
+        this.isLactoseFree = isLactoseFree
+    }
+};
+
+export default Meal;

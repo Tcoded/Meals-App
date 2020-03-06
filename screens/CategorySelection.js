@@ -1,23 +1,41 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+    View,
+    Text,
+    FlatList,
+    StyleSheet,
+    TouchableOpacity,
+    TouchableNativeFeedback,
+    Platform
+} from 'react-native';
 
 import DefaultStyles from '../constants/DefaultStyles';
-import Colors from '../constants/Colors';
 import { CATEGORIES } from '../data/sample-data';
 
 const CategorySelection = props => {
+    let TouchableComponent = TouchableOpacity;
+
+    if (Platform.OS === 'android' && Platform.Version > 20) {
+        TouchableComponent = TouchableNativeFeedback;
+    }
+
     const renderGridItem = (itemData) => {
         return (
-            <TouchableOpacity
-                style={styles.gridItem}
-                onPress={() => {
-                    props.navigation.navigate('CategoryMeals')
-                }}
-            >
-                <View>
-                    <Text>{itemData.item.title}</Text>
-                </View>
-            </TouchableOpacity>
+            <View style={styles.gridItem}>
+                <TouchableComponent
+                    style={styles.touchable}
+                    onPress={() => {
+                        props.navigation.navigate({
+                            routeName: 'CategoryMeals',
+                            params: { categoryId: itemData.item.id }
+                        });
+                    }}
+                >
+                    <View style={{...styles.container, backgroundColor: itemData.item.color }}>
+                        <Text style={DefaultStyles.title} numberOfLines={2}>{itemData.item.title}</Text>
+                    </View>
+                </TouchableComponent>
+            </View>
         );
     };
 
@@ -31,10 +49,7 @@ const CategorySelection = props => {
 };
 
 CategorySelection.navigationOptions = {
-    headerTitle: 'Meal Categories',
-    headerStyle: {
-        backgroundColor: Colors.primaryColor
-    }
+    headerTitle: 'Meal Categories'
 };
 
 const styles = StyleSheet.create({
@@ -42,7 +57,23 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 15,
         height: 140,
-        maxHeight: '33%'
+        borderRadius: 15,
+        overflow: 'hidden'
+    },
+    container: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        padding: 10,
+        shadowColor: 'black',
+        shadowOpacity: 0.25,
+        shadowRadius: 10,
+        shadowOffset: { width: 0, height: 2 },
+        elevation: 3,
+        borderRadius: 15
+    },
+    touchable: {
+        flex: 1
     }
 });
 

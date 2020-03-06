@@ -7,5 +7,9 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    title: {
+        fontFamily: 'open-sans-bold',
+        fontSize: 20
     }
 });
