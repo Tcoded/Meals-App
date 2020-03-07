@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 140,
         borderRadius: 15,
+        elevation: 3,
         overflow: 'hidden'
     },
     container: {
@@ -69,7 +70,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 10,
         shadowOffset: { width: 0, height: 2 },
-        elevation: 3,
         borderRadius: 15
     },
     touchable: {
