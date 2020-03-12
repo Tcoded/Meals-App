@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import DefaultStyles from '../constants/DefaultStyles';
@@ -32,7 +32,5 @@ MealDetails.navigationOptions = navigationData => {
         )
     };
 };
-
-const styles = StyleSheet.create({});
 
 export default MealDetails;
