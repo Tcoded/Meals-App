@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    TouchableOpacity,
+    ImageBackground
+} from 'react-native';
 
 import DefaultStyles from '../constants/Colors';
 
@@ -14,9 +20,9 @@ const MealItem = props => {
                         </ImageBackground>
                     </View>
                     <View style={{...styles.mealRow, ...styles.mealDetail}}>
-                        <Text>{props.duration}m</Text>
-                        <Text>{props.complexity.toUpperCase()}</Text>
-                        <Text>{props.cost.toUpperCase()}</Text>
+                        <Text style={DefaultStyles.text}>{props.duration}m</Text>
+                        <Text style={DefaultStyles.text}>{props.complexity.toUpperCase()}</Text>
+                        <Text style={DefaultStyles.text}>{props.cost.toUpperCase()}</Text>
                     </View>
                 </View>
             </TouchableOpacity>

@@ -11,5 +11,8 @@ export default StyleSheet.create({
     title: {
         fontFamily: 'open-sans-bold',
         fontSize: 20
+    },
+    text: {
+        fontFamily: 'open-sans'
     }
 });
