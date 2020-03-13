@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 
 import DefaultStyles from '../constants/DefaultStyles';
 
@@ -11,6 +11,8 @@ const Filters = props => {
     )
 };
 
-const styles = StyleSheet.create({});
+Filters.navigationOptions = {
+    headerTitle: 'My Filters'
+};
 
 export default Filters;

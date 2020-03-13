@@ -8,9 +8,11 @@ import {
     TouchableNativeFeedback,
     Platform
 } from 'react-native';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import DefaultStyles from '../constants/DefaultStyles';
 import { CATEGORIES } from '../data/sample-data';
+import CustomHeaderButton from '../components/CustomHeaderButton';
 
 const CategorySelection = props => {
     let TouchableComponent = TouchableOpacity;
@@ -48,8 +50,17 @@ const CategorySelection = props => {
     );
 };
 
-CategorySelection.navigationOptions = {
-    headerTitle: 'Meal Categories'
+CategorySelection.navigationOptions = navData => {
+    return {
+        headerTitle: 'Meal Categories',
+        headerLeft: () => (
+            <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+                <Item title='Menu' iconName='ios-menu' onPress={() => {
+                    navData.navigation.toggleDrawer();
+                }} />
+            </HeaderButtons>
+        )
+    }
 };
 
 const styles = StyleSheet.create({

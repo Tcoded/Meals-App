@@ -3,13 +3,15 @@ import { Platform } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { Ionicons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { Ionicons } from '@expo/vector-icons';
 
 import CategorySelection from '../screens/CategorySelection';
 import CategoryMeal from '../screens/CategoryMeal';
 import MealDetails from '../screens/MealDetails';
 import Favorites from '../screens/Favorites';
+import Filters from '../screens/Filters';
 import Colors from '../constants/Colors';
 
 const defaultStackOptions = {
@@ -79,4 +81,13 @@ const TabNavigator = Platform.OS === 'android'
     }
 );
 
-export default createAppContainer(TabNavigator);
+const FiltersNav = createStackNavigator({
+    Filters: Filters
+});
+
+const MainNavigator = createDrawerNavigator({
+    MainScreen: TabNavigator,
+    Filters: FiltersNav
+});
+
+export default createAppContainer(MainNavigator);
