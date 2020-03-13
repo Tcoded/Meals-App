@@ -5,7 +5,6 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     screen: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center'
     },
     title: {
@@ -14,5 +13,8 @@ export default StyleSheet.create({
     },
     text: {
         fontFamily: 'open-sans'
+    },
+    center: {
+        textAlign: 'center'
     }
 });

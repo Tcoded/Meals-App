@@ -26,11 +26,11 @@ const MealDetails = props => {
                 <Text style={DefaultStyles.text}>{selectedMeal.complexity.toUpperCase()}</Text>
                 <Text style={DefaultStyles.text}>{selectedMeal.cost.toUpperCase()}</Text>
             </View>
-            <Text style={{...DefaultStyles.title, ...styles.center}}>Ingredients</Text>
+            <Text style={{...DefaultStyles.title, ...DefaultStyles.center}}>Ingredients</Text>
             {selectedMeal.ingredients.map(ingredient => (
                 <ListItem key={ingredient}>{ingredient}</ListItem>))
             }
-            <Text style={{...DefaultStyles.title, ...styles.center}}>Directions</Text>
+            <Text style={{...DefaultStyles.title, ...DefaultStyles.center}}>Directions</Text>
             {selectedMeal.directions.map(direction => (
                 <ListItem key={direction}>{direction}</ListItem>))
             }
@@ -60,9 +60,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         padding: 15,
         justifyContent: 'space-between'
-    },
-    center: {
-        textAlign: 'center'
     },
     listItem: {
         marginHorizontal: 20,

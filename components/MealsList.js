@@ -23,7 +23,7 @@ const MealsList = props => {
     }
 
     return (
-        <View style={DefaultStyles.screen}>
+        <View style={{...DefaultStyles.screen, ...styles.justify}}>
             <FlatList
                 data={props.listData}
                 renderItem={renderMealItem}
@@ -36,6 +36,9 @@ const MealsList = props => {
 const styles = StyleSheet.create({
     list: {
         width: '100%'
+    },
+    justify: {
+        justifyContent: 'center'
     }
 });
 
