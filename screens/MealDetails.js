@@ -6,6 +6,14 @@ import DefaultStyles from '../constants/DefaultStyles';
 import { MEALS } from '../data/sample-data';
 import CustomHeaderButton from '../components/CustomHeaderButton';
 
+const ListItem = props => {
+    return (
+        <View style={styles.listItem}>
+            <Text style={DefaultStyles.text}>{props.children}</Text>
+        </View>
+    );
+};
+
 const MealDetails = props => {
     const mealId = props.navigation.getParam('mealId');
     const selectedMeal = MEALS.find(meal => meal.id === mealId);
@@ -20,14 +28,14 @@ const MealDetails = props => {
             </View>
             <Text style={{...DefaultStyles.title, ...styles.center}}>Ingredients</Text>
             {selectedMeal.ingredients.map(ingredient => (
-                <Text key={ingredient}>{ingredient}</Text>))
+                <ListItem key={ingredient}>{ingredient}</ListItem>))
             }
             <Text style={{...DefaultStyles.title, ...styles.center}}>Directions</Text>
             {selectedMeal.directions.map(direction => (
-                <Text key={direction}>{direction}</Text>))
+                <ListItem key={direction}>{direction}</ListItem>))
             }
         </ScrollView>
-    )
+    );
 };
 
 MealDetails.navigationOptions = navigationData => {
@@ -55,6 +63,13 @@ const styles = StyleSheet.create({
     },
     center: {
         textAlign: 'center'
+    },
+    listItem: {
+        marginHorizontal: 20,
+        marginVertical: 10,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        padding: 10
     }
 });
 

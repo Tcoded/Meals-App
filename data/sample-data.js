@@ -90,9 +90,9 @@ export const MEALS = [
     ],
     [
       'Form 2 patties',
-      'Fry the patties for c. 4 minutes on each side',
-      'Quickly fry the buns for c. 1 minute on each side',
-      'Bruch buns with ketchup',
+      'Fry the patties for 4 minutes on each side',
+      'Quickly fry the buns for 1 minute on each side',
+      'Brush buns with ketchup',
       'Serve burger with tomato, cucumber and onion'
     ],
     false,
@@ -120,11 +120,11 @@ export const MEALS = [
       'Lemon Slices'
     ],
     [
-      'Tenderize the veal to about 2â€“4mm, and salt on both sides.',
+      'Tenderize the veal to about 4mm, and salt on both sides.',
       'On a flat plate, stir the eggs briefly with a fork.',
       'Lightly coat the cutlets in flour then dip into the egg, and finally, coat in breadcrumbs.',
       'Heat the butter and oil in a large pan (allow the fat to get very hot) and fry the schnitzels until golden brown on both sides.',
-      'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes â€˜fluffyâ€™.',
+      'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes fluffy.',
       'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
       'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
     ],
@@ -154,9 +154,9 @@ export const MEALS = [
       'Salt and Pepper'
     ],
     [
-      'Wash and cut salad and herbs',
+      'Wash and cut salad + herbs',
       'Dice the salmon',
-      'Process mustard, vinegar and olive oil into a dessing',
+      'Process mustard, vinegar and olive oil into a dressing',
       'Prepare the salad',
       'Add salmon cubes and dressing'
     ],
@@ -175,21 +175,21 @@ export const MEALS = [
     'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
     240,
     [
-      '4 Sheets of Gelatine',
+      '4 Sheets of gelatin',
       '150ml Orange Juice',
       '80g Sugar',
-      '300g Yoghurt',
+      '300g Yogurt',
       '200g Cream',
       'Orange Peel'
     ],
     [
-      'Dissolve gelatine in pot',
+      'Dissolve gelatin in pot',
       'Add orange juice and sugar',
       'Take pot off the stove',
-      'Add 2 tablespoons of yoghurt',
-      'Stir gelatin under remaining yoghurt',
+      'Add 2 tablespoons of yogurt',
+      'Stir gelatin under remaining yogurt',
       'Cool everything down in the refrigerator',
-      'Whip the cream and lift it under die orange mass',
+      'Whip the cream and fold it into the orange mix',
       'Cool down again for at least 4 hours',
       'Serve with orange peel'
     ],
@@ -220,7 +220,7 @@ export const MEALS = [
       'In a large bowl, sift together the flour, baking powder, salt and sugar.',
       'Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.',
       'Heat a lightly oiled griddle or frying pan over medium high heat.',
-      'Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.'
+      'Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on each side and serve hot.'
     ],
     true,
     false,
@@ -247,7 +247,7 @@ export const MEALS = [
     ],
     [
       'Slice and fry the chicken breast',
-      'Process onion, garlic and ginger into paste and sautÃ© everything',
+      'Process onion, garlic and ginger into paste and saute everything',
       'Add spices and stir fry',
       'Add chicken breast + 250ml of water and cook everything for 10 minutes',
       'Add coconut milk',
@@ -282,7 +282,7 @@ export const MEALS = [
       '1 Tablespoon white Sugar'
     ],
     [
-      'Preheat oven to 190Â°C. Line a rimmed baking sheet with parchment paper.',
+      'Preheat oven to 190C. Line a rimmed baking sheet with parchment paper.',
       'Brush bottom and sides of 2 ramekins lightly with 1 teaspoon melted butter; cover bottom and sides right up to the rim.',
       'Add 1 tablespoon white sugar to ramekins. Rotate ramekins until sugar coats all surfaces.',
       'Place chocolate pieces in a metal mixing bowl.',
@@ -290,15 +290,15 @@ export const MEALS = [
       'Melt 1 tablespoon butter in a skillet over medium heat. Sprinkle in flour. Whisk until flour is incorporated into butter and mixture thickens.',
       'Whisk in cold milk until mixture becomes smooth and thickens. Transfer mixture to bowl with melted chocolate.',
       'Add salt and cayenne pepper. Mix together thoroughly. Add egg yolk and mix to combine.',
-      'Leave bowl above the hot (not simmering) water to keep chocolate warm while you whip the egg whites.',
+      'Leave bowl above the hot (but not simmering) water to keep chocolate warm while you whip the egg whites.',
       'Place 2 egg whites in a mixing bowl; add cream of tartar. Whisk until mixture begins to thicken and a drizzle from the whisk stays on the surface about 1 second before disappearing into the mix.',
-      'Add 1/3 of sugar and whisk in. Whisk in a bit more sugar about 15 seconds.',
-      'whisk in the rest of the sugar. Continue whisking until mixture is about as thick as shaving cream and holds soft peaks, 3 to 5 minutes.',
-      'Transfer a little less than half of egg whites to chocolate.',
+      'Add 1/3 of sugar and whisk in. Whisk in a bit more sugar for about 15 seconds.',
+      'Whisk in the rest of the sugar. Continue whisking until mixture is about as thick as shaving cream and holds soft peaks, 3 to 5 minutes.',
+      'Transfer a little less than half of the egg whites to chocolate.',
       'Mix until egg whites are thoroughly incorporated into the chocolate.',
       'Add the rest of the egg whites; gently fold into the chocolate with a spatula, lifting from the bottom and folding over.',
       'Stop mixing after the egg white disappears. Divide mixture between 2 prepared ramekins. Place ramekins on prepared baking sheet.',
-      'Bake in preheated oven until scuffles are puffed and have risen above the top of the rims, 12 to 15 minutes.'
+      'Bake in preheated oven until souffles are puffed and have risen above the top of the rims, 12 to 15 minutes.'
     ],
     true,
     false,
@@ -327,7 +327,7 @@ export const MEALS = [
       'Roast the pine nuts',
       'Halve the tomatoes',
       'Mix with asparagus, salad and dressing',
-      'Serve with Baguette'
+      'Serve with a Baguette'
     ],
     true,
     true,
